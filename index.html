@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sorteio de números aleatório online">
     <title>Sorteador</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -19,14 +20,18 @@
                     <div>
                         <span>Escolha</span>
                         <input type="number" name="quantidade" id="quantidade" value="1" min="1" max="10">
-                        <span>número entre</span>
+
+                        <span>número(s) entre</span>
                         <input type="number" name="min" id="min" value="0" min="0">
+
                         <span>e</span>
                         <input type="number" name="max" id="max" value="10" min="2">
                     </div>
+
                     <div class="msg-erro hidden">
                         <span>mensagem de erro de validação de campos</span>
                     </div>
+
                     <div>
                         <a href="#" onclick="sortear()">sortear</a>
                     </div>

@@ -1,8 +1,10 @@
 // ---------------------- função botão-sortear ----------------------//
 function sortear() {
   console.log("sorteando...");
+
   hidden(); //esconde a mensagem de erro
-  const error = document.querySelector(".msg-erro span"); //seleciona a div de erro
+
+  const error = document.querySelector(".msg-erro span"); //seleciona a div que possio a mensagem de erro
 
   removeList(); //remove os itens li da lista antes de inserir os novos
 
@@ -36,7 +38,7 @@ function aleatorio(qtd, min, max) {
   for (let i = 0; i < qtd; i++) {
     let index = Math.floor(Math.random() * tempList.length); //sorteia um índice da lista
     groupList.push(tempList[index]);
-    tempList.splice(index, 1); //remove um elemento começando na posição index
+    tempList.splice(index, 1); //remove o elemento sorteado (remov. 1 element começando na posição index)
   }
   // console.log(groupList);
   return groupList;
@@ -52,19 +54,20 @@ function getParam() {
   return param;
 }
 
-// ---------------------- remove lista de números sorteados do DOM ----------------------//
+// ---------------------- remove do DOM a lista de números sorteados ----------------------//
 function removeList() {
   elementos = document.querySelectorAll(".resultado li");
   elementos.forEach((element) => {
     element.remove();
   });
 }
-// ---------------------- aplica a classe hidden/esconder elemento ----------------------//
+// ---------------------- esconde a mensagem de erro/aplica a classe hidden ----------------------//
 function hidden() {
   elemento = document.querySelector(".msg-erro");
   elemento.classList.add("hidden");
 }
 
+// ---------------------- mostra a mensagem de erro/remove a classe hidden ----------------------//
 function show() {
   elemento = document.querySelector(".msg-erro");
   elemento.classList.remove("hidden");
